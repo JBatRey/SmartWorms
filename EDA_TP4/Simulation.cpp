@@ -87,6 +87,7 @@ bool Simulation::setSimulation(bool displayCreation) {
 		cout << "Failed to create graphic pointer\n";
 		result = false;
 	}
+
 	else if (!eventControl) {
 		cout << "Failed to create event pointer\n";
 		result = false;
@@ -123,6 +124,7 @@ bool Simulation::setSimulation(bool displayCreation) {
 
 		result = graphicControl->createBitmaps();
 	}
+
 	return result;
 }
 
@@ -130,10 +132,6 @@ bool Simulation::setSimulation(bool displayCreation) {
 shared_ptr<GraphicClass> Simulation::getGraphicControl(void) { return graphicControl; }
 shared_ptr<TimeClass> Simulation::getTimeControl(void) { return timeControl; }
 shared_ptr<EventClass> Simulation::getEventControl(void) { return eventControl; }
-
-//Destructor. Frees memory.
-Simulation::~Simulation() {
-}
 
 //Communicates "outside world" with EventClass' dispatcher.
 bool Simulation::dispatch(void) {
