@@ -23,7 +23,7 @@ public:
 	Simulation(unsigned int width_ = defaultWidth, unsigned int height_ = defaultHeight, double FPS_ = defaultFPS,
 		int wormCount_ = MAXWORMS);
 
-	shared_ptr<GraphicClass> getGraphicControl(void);
+	unique_ptr<GraphicClass> getGraphicControl(void);
 	shared_ptr<TimeClass> getTimeControl(void);
 	shared_ptr<EventClass> getEventControl(void);
 
@@ -47,7 +47,7 @@ public:
 private:
 
 	//Datos miembro de Simulation.
-	shared_ptr<GraphicClass> graphicControl;
+	unique_ptr<GraphicClass> graphicControl;
 	shared_ptr<TimeClass> timeControl;
 	shared_ptr<EventClass> eventControl;
 

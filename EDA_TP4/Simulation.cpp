@@ -79,7 +79,7 @@ bool Simulation::setSimulation(bool displayCreation) {
 	bool result = true;
 
 	//Creates control variables and checks for proper initialization.
-	graphicControl = make_shared<GraphicClass>(width, height);
+	graphicControl = make_unique<GraphicClass>(width, height);
 	eventControl = make_shared<EventClass>();
 	timeControl = make_shared<TimeClass>();
 
@@ -129,7 +129,7 @@ bool Simulation::setSimulation(bool displayCreation) {
 }
 
 //Class getters.
-shared_ptr<GraphicClass> Simulation::getGraphicControl(void) { return graphicControl; }
+unique_ptr<GraphicClass> Simulation::getGraphicControl(void) { return move(graphicControl);}
 shared_ptr<TimeClass> Simulation::getTimeControl(void) { return timeControl; }
 shared_ptr<EventClass> Simulation::getEventControl(void) { return eventControl; }
 
@@ -137,6 +137,8 @@ shared_ptr<EventClass> Simulation::getEventControl(void) { return eventControl; 
 bool Simulation::dispatch(void) {
 	return (eventControl->dispatch(this));
 }
+
+Simulation::~Simulation(void) {};
 
 /* When a key is pressed, it checks whether it's a key linked to
 any worm's movement. If so, then it tells the worm to start the movement.*/
