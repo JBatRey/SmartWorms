@@ -1,7 +1,7 @@
 #pragma once
 #include "EventClass.h"
 #include "TimeClass.h"
-#include "GraphicClass.h"
+#include "GraphicClass.hpp"
 #include "Worm.h"
 #include <memory>
 using namespace std;
@@ -51,7 +51,7 @@ private:
 	shared_ptr<TimeClass> timeControl;
 	shared_ptr<EventClass> eventControl;
 
-	Worm* wormVector[MAXWORMS];
+	shared_ptr<Worm> wormVector[MAXWORMS];
 
 	int wormCount;
 

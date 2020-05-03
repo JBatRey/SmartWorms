@@ -1,5 +1,5 @@
 #include "EventClass.h"
-#include "Simulation.h"
+#include "Simulation.hpp"
 EventClass::EventClass(ALLEGRO_EVENT_QUEUE* Queue_) : Queue(Queue_) {};
 
 //Attempts to create Allegro event queue. Returns false if unsuccessful.

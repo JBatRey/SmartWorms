@@ -1,4 +1,4 @@
-#include "Simulation.h"
+#include "Simulation.hpp"
 #include <allegro5/allegro_image.h>
 #include <allegro5/keyboard.h>
 
@@ -133,10 +133,6 @@ shared_ptr<EventClass> Simulation::getEventControl(void) { return eventControl; 
 
 //Destructor. Frees memory.
 Simulation::~Simulation() {
-	for (int i = 0; i < wormCount; i++) {
-		if (wormVector[i])
-			delete wormVector[i];
-	}
 }
 
 //Communicates "outside world" with EventClass' dispatcher.
@@ -189,7 +185,7 @@ Returns false if there's been a memory allocation error.*/
 bool Simulation::initializeWorms(void) {
 	bool result = true;
 	for (int i = 0; i < wormCount; i++) {
-		if (!(wormVector[i] = new (nothrow) Worm)) {
+		if (!(wormVector[i] = make_shared<Worm>())) {
 			result = false;
 			wormCount = i;
 		}

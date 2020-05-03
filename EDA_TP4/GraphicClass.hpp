@@ -1,6 +1,10 @@
 #pragma once
 #include <iostream>
 #include <allegro5/allegro.h>
+#include <memory>
+#include "Worm.h"
+using namespace std;
+
 #define MAXBITS 15
 class GraphicClass {
 public:
@@ -8,7 +12,7 @@ public:
 	//GraphicClass constructor.
 	GraphicClass(unsigned int width_, unsigned int height_);
 
-	void draw(void* whichWorm);
+	void draw(shared_ptr<Worm>& whichWorm);
 
 	bool createBitmaps(void);
 

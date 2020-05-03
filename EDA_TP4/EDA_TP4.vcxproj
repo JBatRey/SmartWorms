@@ -168,9 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EventClass.h" />
-    <ClInclude Include="GraphicClass.h" />
+    <ClInclude Include="GraphicClass.hpp" />
     <ClInclude Include="Worm.h" />
-    <ClInclude Include="Simulation.h" />
+    <ClInclude Include="Simulation.hpp" />
     <ClInclude Include="TimeClass.h" />
   </ItemGroup>
   <ItemGroup>

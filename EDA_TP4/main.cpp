@@ -1,4 +1,4 @@
-#include "Simulation.h"
+#include "Simulation.hpp"
 #include <iostream>
 
 using namespace std;
