@@ -65,8 +65,8 @@ GraphicClass::~GraphicClass(void) {
 }
 
 /*Draws every worm in its current position, with its corresponding bitmap.*/
-void GraphicClass::draw(shared_ptr<Worm>& whichWorm) {
-	shared_ptr<Worm> wormPtr = whichWorm;
+void GraphicClass::draw(const unique_ptr<Worm>& wormPtr) {
+	//shared_ptr<Worm> wormPtr = whichWorm;
 	ALLEGRO_BITMAP* temp = nullptr;
 
 	/*State is 3 by default (idle worm state).*/

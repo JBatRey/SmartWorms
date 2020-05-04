@@ -42,6 +42,7 @@ public:
 	bool dispatch(void);
 
 	bool initializeWorms(void);
+
 	~Simulation();
 
 private:
@@ -51,7 +52,7 @@ private:
 	shared_ptr<TimeClass> timeControl;
 	shared_ptr<EventClass> eventControl;
 
-	shared_ptr<Worm> wormVector[MAXWORMS];
+	unique_ptr<Worm> wormVector[MAXWORMS];
 
 	int wormCount;
 

@@ -185,7 +185,7 @@ Returns false if there's been a memory allocation error.*/
 bool Simulation::initializeWorms(void) {
 	bool result = true;
 	for (int i = 0; i < wormCount; i++) {
-		if (!(wormVector[i] = make_shared<Worm>())) {
+		if (!(wormVector[i] = make_unique<Worm>())) {
 			result = false;
 			wormCount = i;
 		}
