@@ -65,7 +65,7 @@ GraphicClass::~GraphicClass(void) {
 }
 
 /*Draws every worm in its current position, with its corresponding bitmap.*/
-void GraphicClass::draw(const unique_ptr<Worm>& wormPtr) {
+void GraphicClass::draw(Worm worm) {
 	//shared_ptr<Worm> wormPtr = whichWorm;
 	ALLEGRO_BITMAP* temp = nullptr;
 
@@ -73,14 +73,14 @@ void GraphicClass::draw(const unique_ptr<Worm>& wormPtr) {
 	int state = 3;
 
 	/*If worm is jumping, it gets the jumping step and loads jumping image.*/
-	if (wormPtr->getJumpState()) {
-		state = wormPtr->getStepJump();
+	if (worm.getJumpState()) {
+		state = worm.getStepJump();
 		temp = jumpBitmaps[state];
 	}
 	else {
 		/*If worm is moving, it gets the movement step.*/
-		if (wormPtr->getMovementState()) {
-			state = wormPtr->getStepMove();
+		if (worm.getMovementState()) {
+			state = worm.getStepMove();
 			temp = moveBitmaps[state];
 		}
 
@@ -89,10 +89,10 @@ void GraphicClass::draw(const unique_ptr<Worm>& wormPtr) {
 	}
 
 	//Draws bitmap (either the real one or mirrored, depending on the worm's direction.
-	if (wormPtr->getDirection() == 1)
-		al_draw_bitmap(temp, wormPtr->getXPos(), wormPtr->getYPos(), ALLEGRO_FLIP_HORIZONTAL);
+	if (worm.getDirection() == 1)
+		al_draw_bitmap(temp, worm.getXPos(), worm.getYPos(), ALLEGRO_FLIP_HORIZONTAL);
 	else
-		al_draw_bitmap(temp, wormPtr->getXPos(), wormPtr->getYPos(), 0);
+		al_draw_bitmap(temp, worm.getXPos(), worm.getYPos(), 0);
 }
 
 /*Loads all bitmaps.*/

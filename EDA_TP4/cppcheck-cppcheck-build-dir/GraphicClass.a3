@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2305656971">
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;temp&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;temp&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file0="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\GraphicClass.cpp" file="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\GraphicClass.cpp" line="88" column="8" info="temp is overwritten"/>
+            <location file0="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\GraphicClass.cpp" file="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\GraphicClass.cpp" line="84" column="9" info="temp is assigned"/>
+            <symbol>temp</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="createBitmaps" lineNumber="21"/>
+    <functiondecl functionName="createDisplay" lineNumber="42"/>
+    <functiondecl functionName="getDisplay" lineNumber="46"/>
+    <functiondecl functionName="draw" lineNumber="68"/>
+    <functiondecl functionName="loadBitmaps" lineNumber="99"/>
+    <functiondecl functionName="drawBackground" lineNumber="137"/>
+    <functioncall functionName="ALLEGRO_FLIP_HORIZONTAL"/>
+    <functioncall functionName="GraphicClass"/>
+    <functioncall functionName="al_create_bitmap"/>
+    <functioncall functionName="al_create_display"/>
+    <functioncall functionName="al_destroy_bitmap"/>
+    <functioncall functionName="al_destroy_display"/>
+    <functioncall functionName="al_draw_bitmap"/>
+    <functioncall functionName="al_load_bitmap"/>
+    <functioncall functionName="background"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="display"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="getDirection"/>
+    <functioncall functionName="getJumpState"/>
+    <functioncall functionName="getMovementState"/>
+    <functioncall functionName="getStepJump"/>
+    <functioncall functionName="getStepMove"/>
+    <functioncall functionName="getXPos"/>
+    <functioncall functionName="getYPos"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="height_"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="loadBitmaps"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="strcpy"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="tempchar"/>
+    <functioncall functionName="to_string"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="width_"/>
+  </FileInfo>
+</analyzerinfo>

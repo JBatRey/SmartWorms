@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2479696042">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;graphicControl&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;graphicControl&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" file="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" line="13" column="2"/>
+            <symbol>graphicControl</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;timeControl&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;timeControl&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" file="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" line="14" column="2"/>
+            <symbol>timeControl</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;eventControl&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;eventControl&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" file="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" line="15" column="2"/>
+            <symbol>eventControl</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;movementType&apos; can be reduced." verbose="The scope of the variable &apos;movementType&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" file="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" line="146" column="6"/>
+            <symbol>movementType</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;whichMove&apos; can be reduced." verbose="The scope of the variable &apos;whichMove&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" file="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Simulation.cpp" line="161" column="6"/>
+            <symbol>whichMove</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="initializeAll" lineNumber="21"/>
+    <functiondecl functionName="setAllegro" lineNumber="51"/>
+    <functiondecl functionName="setSimulation" lineNumber="78"/>
+    <functiondecl functionName="getGraphicControl" lineNumber="132"/>
+    <functiondecl functionName="getTimeControl" lineNumber="133"/>
+    <functiondecl functionName="getEventControl" lineNumber="134"/>
+    <functiondecl functionName="dispatch" lineNumber="137"/>
+    <functiondecl functionName="startMoving" lineNumber="145"/>
+    <functiondecl functionName="stopMoving" lineNumber="160"/>
+    <functiondecl functionName="refresh" lineNumber="173"/>
+    <functiondecl functionName="initializeWorms" lineNumber="185"/>
+    <functiondecl functionName="setDefaultKeys" lineNumber="197"/>
+    <functioncall functionName="ALLEGRO_KEY_A"/>
+    <functioncall functionName="ALLEGRO_KEY_D"/>
+    <functioncall functionName="ALLEGRO_KEY_LEFT"/>
+    <functioncall functionName="ALLEGRO_KEY_RIGHT"/>
+    <functioncall functionName="ALLEGRO_KEY_UP"/>
+    <functioncall functionName="ALLEGRO_KEY_W"/>
+    <functioncall functionName="FPS"/>
+    <functioncall functionName="FPS_"/>
+    <functioncall functionName="Simulation"/>
+    <functioncall functionName="al_clear_to_color"/>
+    <functioncall functionName="al_flip_display"/>
+    <functioncall functionName="al_get_display_event_source"/>
+    <functioncall functionName="al_get_keyboard_event_source"/>
+    <functioncall functionName="al_get_timer_event_source"/>
+    <functioncall functionName="al_init"/>
+    <functioncall functionName="al_init_image_addon"/>
+    <functioncall functionName="al_install_keyboard"/>
+    <functioncall functionName="al_map_rgb"/>
+    <functioncall functionName="al_register_event_source"/>
+    <functioncall functionName="checkKeyCode"/>
+    <functioncall functionName="createBitmaps"/>
+    <functioncall functionName="createDisplay"/>
+    <functioncall functionName="createEventQueue"/>
+    <functioncall functionName="createTimer"/>
+    <functioncall functionName="dispatch"/>
+    <functioncall functionName="draw"/>
+    <functioncall functionName="drawBackground"/>
+    <functioncall functionName="eventControl"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getDisplay"/>
+    <functioncall functionName="getQueue"/>
+    <functioncall functionName="getTimer"/>
+    <functioncall functionName="graphicControl"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="height_"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initializeWorms"/>
+    <functioncall functionName="keyCode"/>
+    <functioncall functionName="make_shared"/>
+    <functioncall functionName="make_unique"/>
+    <functioncall functionName="move"/>
+    <functioncall functionName="moveKeys1"/>
+    <functioncall functionName="moveKeys2"/>
+    <functioncall functionName="movementType"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="setAllegro"/>
+    <functioncall functionName="setDefaultKeys"/>
+    <functioncall functionName="setJumpKey"/>
+    <functioncall functionName="setMoveKeys"/>
+    <functioncall functionName="setSimulation"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="timeControl"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="updateStep"/>
+    <functioncall functionName="whichMove"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="width_"/>
+    <functioncall functionName="wormCount"/>
+    <functioncall functionName="wormCount_"/>
+  </FileInfo>
+</analyzerinfo>

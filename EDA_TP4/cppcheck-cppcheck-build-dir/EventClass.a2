@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3777808539">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="createEventQueue" lineNumber="6"/>
+    <functiondecl functionName="getQueue" lineNumber="9"/>
+    <functiondecl functionName="getEvent" lineNumber="10"/>
+    <functiondecl functionName="getNextEventType" lineNumber="13"/>
+    <functiondecl functionName="dispatch" lineNumber="27"/>
+    <functioncall functionName="Event"/>
+    <functioncall functionName="EventClass"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Queue"/>
+    <functioncall functionName="Queue_"/>
+    <functioncall functionName="al_create_event_queue"/>
+    <functioncall functionName="al_destroy_event_queue"/>
+    <functioncall functionName="al_get_next_event"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="keycode"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="refresh"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="startMoving"/>
+    <functioncall functionName="stopMoving"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+  </FileInfo>
+</analyzerinfo>

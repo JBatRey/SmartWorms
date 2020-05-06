@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="976920242">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="startTimer" lineNumber="7"/>
+    <functiondecl functionName="getTimer" lineNumber="10"/>
+    <functiondecl functionName="createTimer" lineNumber="13"/>
+    <functioncall functionName="FPS_"/>
+    <functioncall functionName="TimeClass"/>
+    <functioncall functionName="Timer"/>
+    <functioncall functionName="al_create_timer"/>
+    <functioncall functionName="al_destroy_timer"/>
+    <functioncall functionName="al_start_timer"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="timer_"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4212986553">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Worm::isMovePressed&apos; is not initialized in the constructor." verbose="Member variable &apos;Worm::isMovePressed&apos; is not initialized in the constructor." cwe="398">
+            <location file0="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Worm.cpp" file="F:\ReposVS\SmartTP4\SmartWorms\EDA_TP4\Worm.cpp" line="31" column="7"/>
+            <symbol>Worm::isMovePressed</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="setJumpKey" lineNumber="53"/>
+    <functiondecl functionName="setMoveKeys" lineNumber="57"/>
+    <functiondecl functionName="checkKeyCode" lineNumber="65"/>
+    <functiondecl functionName="start" lineNumber="80"/>
+    <functiondecl functionName="stop" lineNumber="107"/>
+    <functiondecl functionName="getXPos" lineNumber="126"/>
+    <functiondecl functionName="getYPos" lineNumber="127"/>
+    <functiondecl functionName="getStepMove" lineNumber="128"/>
+    <functiondecl functionName="getStepJump" lineNumber="129"/>
+    <functiondecl functionName="getMovementState" lineNumber="130"/>
+    <functiondecl functionName="getJumpState" lineNumber="131"/>
+    <functiondecl functionName="getDirection" lineNumber="132"/>
+    <functiondecl functionName="updateStep" lineNumber="136"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Worm"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="isJumpPressed"/>
+    <functioncall functionName="isJumping"/>
+    <functioncall functionName="isMovePressed"/>
+    <functioncall functionName="isMoving"/>
+    <functioncall functionName="rand"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="validEvent_"/>
+    <functioncall functionName="xPos"/>
+    <functioncall functionName="yPos"/>
+  </FileInfo>
+</analyzerinfo>

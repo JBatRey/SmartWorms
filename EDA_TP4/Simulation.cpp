@@ -13,9 +13,6 @@ Simulation::Simulation(unsigned int width_, unsigned int height_, double FPS_, i
 	graphicControl = nullptr;
 	timeControl = nullptr;
 	eventControl = nullptr;
-
-	for (int i = 0; i < wormCount; i++)
-		wormVector[i] = nullptr;
 }
 
 bool Simulation::initializeAll(void) {
@@ -148,9 +145,9 @@ bool Simulation::startMoving(int keyCode) {
 		return false;
 	else {
 		for (int i = 0; i < wormCount; i++) {
-			movementType = wormVector[i]->checkKeyCode(keyCode);
+			movementType = wormVector[i].checkKeyCode(keyCode);
 			if (movementType)
-				wormVector[i]->start(keyCode, movementType);
+				wormVector[i].start(keyCode, movementType);
 		}
 	}
 	return true;
@@ -160,9 +157,9 @@ any worm's movement. If so, then it tells the worm to stop the movement.*/
 void Simulation::stopMoving(int keyCode) {
 	int whichMove;
 	for (int i = 0; i < wormCount; i++) {
-		whichMove = wormVector[i]->checkKeyCode(keyCode);
+		whichMove = wormVector[i].checkKeyCode(keyCode);
 		if (whichMove) {
-			wormVector[i]->stop(keyCode, whichMove);
+			wormVector[i].stop(keyCode, whichMove);
 			i = wormCount;
 		}
 	}
@@ -175,7 +172,7 @@ void Simulation::refresh(void) {
 	graphicControl->drawBackground();
 	for (int i = 0; i < wormCount; i++) {
 		graphicControl->draw(wormVector[i]);
-		wormVector[i]->updateStep();
+		wormVector[i].updateStep();
 	}
 	al_flip_display();
 }
@@ -185,10 +182,8 @@ Returns false if there's been a memory allocation error.*/
 bool Simulation::initializeWorms(void) {
 	bool result = true;
 	for (int i = 0; i < wormCount; i++) {
-		if (!(wormVector[i] = make_unique<Worm>())) {
-			result = false;
-			wormCount = i;
-		}
+		Worm new_worm;
+		wormVector.push_back(new_worm);
 	}
 	return result;
 }
@@ -198,9 +193,9 @@ void Simulation::setDefaultKeys(void) {
 	int moveKeys1[] = { ALLEGRO_KEY_LEFT, ALLEGRO_KEY_RIGHT };
 	int moveKeys2[] = { ALLEGRO_KEY_A, ALLEGRO_KEY_D };
 
-	wormVector[0]->setJumpKey(ALLEGRO_KEY_UP);
-	wormVector[0]->setMoveKeys(moveKeys1, 2);
+	wormVector[0].setJumpKey(ALLEGRO_KEY_UP);
+	wormVector[0].setMoveKeys(moveKeys1, 2);
 
-	wormVector[1]->setJumpKey(ALLEGRO_KEY_W);
-	wormVector[1]->setMoveKeys(moveKeys2, 2);
+	wormVector[1].setJumpKey(ALLEGRO_KEY_W);
+	wormVector[1].setMoveKeys(moveKeys2, 2);
 }

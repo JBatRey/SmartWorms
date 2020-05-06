@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+        <error id="redundantAssignment" severity="style" msg="Variable &amp;#039;temp&amp;#039; is reassigned a value before the old one has been used." verbose="Variable &amp;#039;temp&amp;#039; is reassigned a value before the old one has been used." sinceDate="05-May-20">
+            <location file="GraphicClass.cpp" line="88" info="temp is overwritten"/>
+            <location file="GraphicClass.cpp" line="84" info="temp is assigned"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;Worm::isMovePressed&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;Worm::isMovePressed&amp;#039; is not initialized in the constructor." sinceDate="05-May-20">
+            <location file="Worm.cpp" line="31"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &amp;#039;graphicControl&amp;#039; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&amp;#039;t explicitly write them to the initialization list. You could avoid assigning &amp;#039;graphicControl&amp;#039; a value by passing the value to the constructor in the initialization list." sinceDate="05-May-20">
+            <location file="Simulation.cpp" line="13"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &amp;#039;timeControl&amp;#039; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&amp;#039;t explicitly write them to the initialization list. You could avoid assigning &amp;#039;timeControl&amp;#039; a value by passing the value to the constructor in the initialization list." sinceDate="05-May-20">
+            <location file="Simulation.cpp" line="14"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &amp;#039;eventControl&amp;#039; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&amp;#039;t explicitly write them to the initialization list. You could avoid assigning &amp;#039;eventControl&amp;#039; a value by passing the value to the constructor in the initialization list." sinceDate="05-May-20">
+            <location file="Simulation.cpp" line="15"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;movementType&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;movementType&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." sinceDate="05-May-20">
+            <location file="Simulation.cpp" line="146"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;whichMove&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;whichMove&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." sinceDate="05-May-20">
+            <location file="Simulation.cpp" line="161"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getGraphicControl&amp;#039; is never used." verbose="The function &amp;#039;getGraphicControl&amp;#039; is never used." sinceDate="05-May-20">
+            <location file="Simulation.cpp" line="132"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;getEvent&amp;#039; is never used." verbose="The function &amp;#039;getEvent&amp;#039; is never used." sinceDate="05-May-20">
+            <location file="EventClass.cpp" line="10"/>
+        </error>
+    </errors>
+</results>

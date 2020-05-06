@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3436503696">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="main" lineNumber="6"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="dispatch"/>
+    <functioncall functionName="endOfInput"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="getEventControl"/>
+    <functioncall functionName="getNextEventType"/>
+    <functioncall functionName="getTimeControl"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initializeAll"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="srand"/>
+    <functioncall functionName="startTimer"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

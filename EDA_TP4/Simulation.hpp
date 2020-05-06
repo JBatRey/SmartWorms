@@ -4,6 +4,7 @@
 #include "GraphicClass.hpp"
 #include "Worm.h"
 #include <memory>
+#include <vector>
 using namespace std;
 
 //Maximum allowed number of worms.
@@ -52,7 +53,7 @@ private:
 	shared_ptr<TimeClass> timeControl;
 	shared_ptr<EventClass> eventControl;
 
-	unique_ptr<Worm> wormVector[MAXWORMS];
+	vector<Worm> wormVector;
 
 	int wormCount;
 

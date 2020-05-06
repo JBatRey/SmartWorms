@@ -12,7 +12,7 @@ public:
 	//GraphicClass constructor.
 	GraphicClass(unsigned int width_, unsigned int height_);
 
-	void draw(const unique_ptr<Worm>& whichWorm);
+	void draw(const Worm whichWorm);
 
 	bool createBitmaps(void);
 
